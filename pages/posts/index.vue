@@ -18,12 +18,11 @@ export default {
       posts: [],
     };
   },
-  async fetch() {
+  async mounted() {
     const posts = await this.$axios.$get(
       "https://jsonplaceholder.typicode.com/posts/"
     );
     this.posts = posts;
   },
-  fetchOnServer: false,
 };
 </script>
