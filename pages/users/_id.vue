@@ -25,7 +25,7 @@ export default {
       return this.users.find(user => user.id == this.id);
     }
   },
-  mounted() {
+  created() {
     console.log(this.$route);
   }
 }
