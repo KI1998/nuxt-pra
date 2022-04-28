@@ -1,6 +1,8 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
+
+    // アプリケーションタイトル。ブラウザタブもこのタイトルが設定される
     title: 'nuxt-practice',
     htmlAttrs: {
       lang: 'en'
