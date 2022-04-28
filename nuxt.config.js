@@ -45,5 +45,20 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+  router: {
+    // これでアプリケーションのベースのURKが「http://localhost:3000/」→「http://localhost:3000/app」に変わる
+    base: "/app/",
+
+    // extendRoutesを利用することでルーティングの手動設定が可能
+    // pagesディレクトリ以外にもページファイルを保存することができる
+    // ↓は「/admin」でアクセスを行った時に、「/admin/index.vue」を表示するように設定している
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: "admin",
+        path: "/admin/",
+        component: resolve(__dirname, "admin/index.vue"),
+      })
+    }
+  },
 }
