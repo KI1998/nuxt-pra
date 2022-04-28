@@ -25,8 +25,5 @@ export default {
       return this.users.find(user => user.id == this.id);
     }
   },
-  created() {
-    console.log(this.$route);
-  }
 }
 </script>
