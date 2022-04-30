@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>count: {{ $store.state.count }}</div>
+    <div>count: {{ $store.state.count.count }}</div>
     <button @click="addCount" >Add</button>
   </div>
 </template>
@@ -9,7 +9,7 @@
 export default {
   methods: {
     addCount() {
-      this.$store.dispatch("increment");
+      this.$store.dispatch("count/increment");
     }
   }
 };
